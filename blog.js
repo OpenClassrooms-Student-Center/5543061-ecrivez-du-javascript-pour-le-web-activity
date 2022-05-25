@@ -24,7 +24,7 @@ async function getBlogPost() {
     let [titleResponse, loremResponse] = await Promise.all([titlePromise, loremPromise]);
     document.querySelector('main').appendChild(buildPostElement(titleResponse.title, loremResponse.lorem));
   } catch (error) {
-    document.querySelector('main').appendChild(buildPostElement('1 erreur est survenue !', error));
+    document.querySelector('main').appendChild(buildPostElement('(1) une  erreur est survenue !', error));
   }
 }
 
